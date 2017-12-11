@@ -14,7 +14,7 @@ def get_departures(stop_id): #Gets the current departures of a stop. Get the sto
 def on_connect(client, userdata, flags, rc): #Fetch and publish aseag data after successfull connection to  MQTT server
     print("Connected with result code "+str(rc))
 
-    client.publish("aseag/departures/Viktorialle", get_departures(401)) #Specify your topics / bus stops here
+    client.publish("aseag/departures/Viktoriallee", get_departures(401)) #Specify your topics / bus stops here
     client.publish("aseag/departures/Normaluhr", get_departures(61))
     client.publish("aseag/departures/Scheibenstrasse", get_departures(109))
     client.disconnect()
