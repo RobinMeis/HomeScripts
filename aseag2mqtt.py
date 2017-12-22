@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, rc): #Fetch and publish aseag data after
     print("Connected with result code "+str(rc))
 
     client.publish("aseag/departures/Viktoriallee", get_departures(56), 1, True) #Specify your topics / bus stops here
-    #client.publish("aseag/departures/Viktoriallee", get_departures(401), 1, True) #Specify your topics / bus stops here
+    client.publish("aseag/departures/Talbot", get_departures(52), 1, True) #Specify your topics / bus stops here
     client.disconnect()
 
 
